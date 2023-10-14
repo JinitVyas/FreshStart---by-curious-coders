@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshStart Guide</title>
+
+    <style>
+      /* Reset some default styles */
+      body,
+      h1,
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Basic styling for the header */
+      header {
+        background-color: #0073e6;
+        color: #fff;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav ul {
+        list-style: none;
+      }
+
+      nav ul li {
+        display: inline;
+        align-items: center;
+        margin-right: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        align-items: center;
+      }
+
+      .auth-section a {
+        margin-left: 20px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* Styling for the banner section */
+      .banner {
+        background-size: cover;
+        text-align: center;
+        padding: 100px 0;
+        color: black;
+      }
+
+      .banner h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .banner p {
+        font-size: 18px;
+      }
+
+      /* Styling for key features section */
+      .key-features {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #f7f7f7;
+        padding: 40px 0;
+      }
+
+      .feature {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .feature h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      /* Styling for how it works section */
+      .how-it-works {
+        text-align: center;
+        padding: 40px 0;
+      }
+
+      .how-it-works h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      /* Styling for testimonials section */
+      .testimonials {
+        background-color: #f7f7f7;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .testimonial {
+        margin: 20px;
+      }
+
+      .testimonial p {
+        font-style: italic;
+      }
+
+      /* Styling for call to action section */
+      .cta {
+        text-align: center;
+        background-color: #0073e6;
+        padding: 40px 0;
+        color: #fff;
+      }
+
+      .cta h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: #fff;
+        color: #0073e6;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      .cta-button:hover {
+        background-color: #0073e6;
+        color: #fff;
+      }
+
+      /* Styling for the footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      footer ul {
+        list-style: none;
+      }
+
+      footer ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+
+      footer a {
+        text-decoration: none;
+        color: #fff;
+      }
+      /* ... (previous styles remain the same) */
+
+      /* Styles for the carousel */
+      .carousel {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .slides {
+        display: flex;
+        animation: slide 10s infinite;
+      }
+
+      .slide {
+        flex: 1;
+        min-width: 100%;
+        text-align: center;
+        transition: opacity 2s ease;
+      }
+
+      .slide img {
+        max-width: 100%;
+        height: 400px;
+      }
+
+      .navigation {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .navigation label {
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        background: #ddd;
+        margin: 0 5px;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background 0.3s ease;
+      }
+
+      /* Show/hide slides when radio button is checked */
+      input[type="radio"]:checked + .navigation label {
+        background: #0073e6;
+      }
+
+      /* Keyframes for the slide animation */
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-100%);
+        }
+        45% {
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(-200%);
+        }
+        70% {
+          transform: translateX(-200%);
+        }
+        75% {
+          transform: translateX(0);
+        }
+        95% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <img
+              src="logo.jpg"
+              alt="FreshStart Guide Logo"
+              height="40px"
+              width="40px"
+            />
+          </li>
+          <li><a href="event1.html">Event Calendar</a></li>
+          <li><a href="club.html">College Clubs</a></li>
+          <li><a href="guidelines.html">Course Guidelines</a></li>
+          <li><a href="activity.html">Activities</a></li>
+          <li><a href="facultydetails.html">Faculty Details</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+        </ul>
+      </nav>
+
+      <div class="auth-section">
+        <a href="#">Log In</a>
+        <a href="#">Sign Up</a>
+      </div>
+    </header>
+
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide first">
+          <img src="college1.jpeg" alt="Image 1" />
+        </div>
+        <div class="slide">
+          <img src="college2.jpeg" alt="Image 2" />
+        </div>
+        <div class="slide">
+          <img src="college3.jpg" alt="Image 3" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner Section -->
+    <section class="banner">
+      <h1>Welcome to FreshStart Guide</h1>
+      <p>Your College Companion</p>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="key-features">
+      <div class="feature">
+        <h2>Campus Map</h2>
+        <p>Navigate the campus easily.</p>
+      </div>
+
+      <!-- Add more feature elements for other key features -->
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <p>Discover how FreshStart Guide can help you.</p>
+      <!-- Add step-by-step explanation or content here -->
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>What Students Say</h2>
+      <div class="testimonial">
+        <p>
+          "FreshStart Guide made my college transition so much smoother. I
+          highly recommend it!"
+        </p>
+        <p>- John Doe, Junior Student</p>
+      </div>
+      <!-- Add more testimonials as needed -->
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+      <h2>Ready to Get Started?</h2>
+      <a href="#" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="facebook.png"
+                  alt="Facebook"
+                  height="40px"
+                  width="40px"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="tweet.png" alt="Twitter" height="40px" width="75px"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="insta.png"
+                  alt="Instagram"
+                  height="40px"
+                  width="40px"
+              /></a>
+            </li>
+            <!-- Add more social media icons as needed -->
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
